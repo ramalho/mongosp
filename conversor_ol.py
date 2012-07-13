@@ -13,19 +13,21 @@ import sys
 import json
 import io
 
-def converte_linha(lin):
+def conv_linha(lin, indent=None):
     rec_type, rec_key, rec_revision, rec_modified, rec_json = lin.split(u'\t')
     rec = json.loads(rec_json)
     rec[u'_id'] = rec_key + u'-' + rec_revision
-    return json.dumps(rec)
+    return json.dumps(rec, indent=indent)
 
-def converte_arquivo(nome_arq):
+def conv_arquivo(nome_arq, max_lin=sys.maxsize, indent=None):
     with io.open(nome_arq, encoding='utf-8') as arq:
-        for lin in arq:
+        for num_lin, lin in enumerate(arq, 1):
             if not lin.strip():
                 continue
-            saida = converte_linha(lin)
+            saida = conv_linha(lin, indent)
             print saida.encode('utf-8')
+            if num_lin >= max_lin:
+                break
 
 if __name__=='__main__':
     if len(sys.argv) == 2:

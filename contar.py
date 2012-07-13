@@ -8,11 +8,11 @@ Contar número de registros de uma coleção
 """
 
 import sys
-from mongo_util import conectar
+from pymongo import Connection
+from pymongo.collection import Collection
 
 def contar_registros(nome_db, nome_colecao):
-    db = conectar(nome_db)
-    return db[nome_colecao].count()
+    return Collection(Connection()[nome_db], nome_colecao).count()
 
 if __name__=='__main__':
     if len(sys.argv) == 3:
