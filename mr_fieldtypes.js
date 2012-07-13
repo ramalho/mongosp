@@ -3,7 +3,11 @@ db = db.getMongo().getDB('openlibrary');
 var map = function () {
     if (this.type.key === "/type/edition") {
         for (field_name in this) {
-            emit(field_name, 1)
+            type = typeof this[field_name];
+            if (type === 'object') {
+                type = this[field_name] instanceof Array ? 'array' : 'object';
+            }
+            emit(field_name+':'+type, 1)
         }
     }
 }

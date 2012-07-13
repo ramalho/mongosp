@@ -2,6 +2,10 @@
 Conversão e importação dos dados
 --------------------------------
 
+Para rodar a instância de teste do MongoDB 2.1::
+
+	$ mongod2.1 -f mongosp.conf
+
 Script ``importar.sh``::
 
 	#/bin/bash
@@ -242,8 +246,6 @@ Usando opção ``jsMode: true``::
 
 
 Resultado::
-
-::
 
 	$ time mongo2.1 mr_fields.js 
 	MongoDB shell version: 2.1.2

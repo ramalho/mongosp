@@ -3,7 +3,11 @@ db = db.getMongo().getDB('openlibrary');
 var map = function () {
     if (this.type.key === "/type/edition") {
         for (field_name in this) {
-            emit(field_name, 1)
+            type = typeof this[field_name];
+            if (type === 'object') {
+                type = this[field_name] instanceof Array ? 'array' : 'object';
+            }
+            emit(field_name+':'+type, 1)
         }
     }
 }
@@ -15,13 +19,14 @@ var reduce = function (key, values) {
 }
 
 var res = db.complete.mapReduce(map, reduce, {
-    out: { inline : 1},
+    out: { replace : 'mr_fieldtypes'},
     jsMode: true
 });
 
-res.results.forEach(function (r) {
-    print(r.value+"\t"+r._id);
+db.mr_fieldtypes.find().sort({ _id:1}).forEach(function (r) {
+    print(r._id+"\t"+r.value);
 });
+/*
 print("-----");
 for (var chave in res.counts) {
     if (chave !== "_id") {
@@ -30,3 +35,4 @@ for (var chave in res.counts) {
 }
 print("-----");
 print("tempo (s)\t"+res.timeMillis/1000);
+*/
