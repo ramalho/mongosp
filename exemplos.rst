@@ -34,18 +34,50 @@ mr_fields.js
    :linenos:
 
 
-stat_pages.js
--------------
+mr_fields_map.js
+----------------
 
-.. literalinclude:: stat_pages.js
+.. literalinclude:: mr_fields_map.js
    :language: python
    :linenos:
 
 
-conf.py
--------
+mr_fields_mapReduce.js
+----------------------
 
-.. literalinclude:: conf.py
+.. literalinclude:: mr_fields_mapReduce.js
+   :language: python
+   :linenos:
+
+
+mr_fields_reduce.js
+-------------------
+
+.. literalinclude:: mr_fields_reduce.js
+   :language: python
+   :linenos:
+
+
+mr_fieldtypes.js
+----------------
+
+.. literalinclude:: mr_fieldtypes.js
+   :language: python
+   :linenos:
+
+
+mr_fieldtypes_sort.js
+---------------------
+
+.. literalinclude:: mr_fieldtypes_sort.js
+   :language: python
+   :linenos:
+
+
+stat_pages.js
+-------------
+
+.. literalinclude:: stat_pages.js
    :language: python
    :linenos:
 
