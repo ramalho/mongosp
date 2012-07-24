@@ -1,9 +1,12 @@
 db = db.getMongo().getDB('library');
 
 var response = db.books.aggregate(
+  {$project : {
+    subjects: 1
+  }},
   {$group : {
-    _id : null,
-    count : {$sum : "$stock"}
+  	_id : null,
+  	subjects : {$addToSet: $subjects}
   }}
 );
 printjson(response.result);
