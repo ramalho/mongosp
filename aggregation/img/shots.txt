@@ -1,0 +1,9 @@
+bookshop.js
+
+capture
+=======
+
+top left: 145, 53
+character cell: 16x37
+width:  16*51 = 816
+height: 37*18 = 666

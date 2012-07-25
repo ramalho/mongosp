@@ -1,2 +1,2 @@
 #!/bin/bash
-mongoimport -d library -c books --drop --jsonArray --file library.js
+mongoimport -d bookshop -c books --drop --jsonArray --file books.js

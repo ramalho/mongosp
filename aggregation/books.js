@@ -1,5 +1,5 @@
 [
-  { _id: "ALI1",
+  { _id: "0393048470",
     title: "The Annotated Alice",
     creators: [
       { role: "author",      name: "Lewis Carroll" },
@@ -17,7 +17,7 @@
     subjects: [ "talking-animals", "logic", "games" ],
     stock: 21
   },
-  { _id: "SCI",
+  { _id: "0879755733",
     title: "Science: Good, Bad, and Bogus",
     creators: [
       { role: "author", name: "Martin Gardner" }
@@ -28,10 +28,10 @@
     sales: [
       { year: 2011, count: 1 }
     ],
-    subjects: [ "science", "parapsychology", "occult" ],
+    subjects: [ "science", "occult" ],
     stock: 1
   },
-  { _id: "SFP",
+  { _id: "0517543818",
     title: "Science Fiction Puzzle Tales",
     creators: [
       { role: "author", name: "Martin Gardner" }
@@ -46,7 +46,7 @@
     subjects: [ "logic", "puzzles" ],
     stock: 1
   },
-  { _id: "SLG",
+  { _id: "0486204928",
     title: "Symbolic Logic and the Game of Logic",
     creators: [
       { role: "author", name: "Lewis Carroll" }
@@ -61,7 +61,7 @@
     subjects: [ "logic", "puzzles" ],
     stock: 3
   },
-  { _id: "ALI2",
+  { _id: "8504008320",
     title: "Alice no País das Maravilhas",
     creators: [
       { role: "author",     name: "Lewis Carroll" },
@@ -78,7 +78,7 @@
     subjects: [ "talking-animals" ],
     stock: 13
   },
-  { _id: "EMI",
+  { _id: "8525045942",
     title: "Aritmética da Emília",
     creators: [
       { role: "author", name: "Monteiro Lobato" }
@@ -94,7 +94,7 @@
     subjects: [ "talking-animals", "math" ],
     stock: 8
   },
-  { _id: "ILO",
+  { _id: "048628462X",
     title: "Introduction to Logic",
     creators: [
       { role: "author",     name: "Alfred Tarski" },
