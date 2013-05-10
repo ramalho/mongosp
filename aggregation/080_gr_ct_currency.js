@@ -1,7 +1,8 @@
 var response = db.books.aggregate({
-	$project : {
-		stock: 1
-	}
-});
+	$group : {
+		_id : "$price.currency",
+		count : {$sum : 1}
+	}}
+);
 
 response.result.forEach(printjson);

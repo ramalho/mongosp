@@ -1,6 +1,7 @@
 var response = db.books.aggregate({
-	$project : {
-		stock: 1
+	$group : {
+		_id : "$language",
+		count : {$sum : 1}
 	}
 });
 

@@ -11,7 +11,7 @@ class Example(object):
         self.ops = {op for op in OPERATORS if ('$'+op) in source_code}
 
     def __len__(self):
-        return len(self.source_code)
+        return len('\n'.join(lin for lin in self.source_code.split('\n') if not lin.startswith('//')))
 
 examples = []
 for filename in sorted(glob('*.js')):

@@ -1,0 +1,27 @@
+                                     group  project  unwind
+ 105 100_pr_stock.js                           X        
+ 115 110_pr_stock_noid.js                      X        
+ 127 050_gr_count.js                   X                
+ 134 060_gr_sum_stock.js               X                
+ 134 070_gr_count_lang.js              X                
+ 140 080_gr_ct_currency.js             X                
+ 167 unwind_subjects.js                        X       X
+ 182 project_stock_value.js            X                
+ 205 group_sales_all.js                X       X       X
+ 213 project_subjects.js               X       X        
+ 233 group_subjects_count.js           X       X       X
+ 242 group_sales_year.js               X       X       X
+ 242 group_subjects.js                 X       X       X
+ 242 group_subjects_ids.js             X       X       X
+ 242 match_currency.js                 X                
+ 261 group_creators.js                 X       X       X
+ 278 group_subjects_sort.js            X       X       X
+ 311 group_authors.js                  X       X       X
+ 390 group_stock_value.js              X                
+ 430 group_stock_value_usd.js          X                
+ 435 group_stock_value_all.js          X                
+ 437 group_stock_value_id.js           X                
+ 439 group_stock_value_title.js        X                
+ 476 project_group_stock_value_all.js  X       X        
+2866 books.js                                           
+                                     group  project  unwind

@@ -1,5 +1,3 @@
-db = db.getMongo().getDB('library');
-
 var response = db.books.aggregate(
   {$project : {
     sales: 1
@@ -10,4 +8,6 @@ var response = db.books.aggregate(
     count : {$sum : "$sales.count"}
   }}
 );
-printjson(response.result);
+
+response.result.forEach(printjson);
+
